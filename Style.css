@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    color: white;
+
+}
+nav.logo1{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+
+nav ul li a:hover{
+    color: #1e90ff;
+}
+
+/* hamburger */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.menu-toggle span{
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+/* banner */
+.banner{
+    background: #f38200;
+    color: white;
+    text-align: right;
+    padding: 100px 20px;
+    /* background-image: url("../images/light.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner h1{
+    font-size: 2.5rem;
+}
+
+.banner p{
+    margin-top: 10px;
+    font-size:1.2rem ;
+}
+
+/* responsive */
+@media (max-width: 768px){
+
+nav ul {
+
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #222;
+    overflow: hidden;
+    max-height: 0;
+}
+nav ul.active{
+    max-height: 500px; /*enough space for items */
+}
+nav ul li{
+    width: 100%;
+}
+nav ul li a{
+    display: block;
+    padding: 15px;
+    border-top: 1px solid #333;
+
+}
+.menu-toggle{
+    display: flex;
+}
+}
+
+header{
+
+    /* background: linear-gradient(to right,#0077ff, #00c4ff); */
+    color: white;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+
+}
+
+.logo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+
+}
+
+.banner-content{
+     text-align: right;
+    max-width: 500px;
+}
+
+.banner-content h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+
+}
+.banner-content p{
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.banner-content button{
+    background: white;
+    color: #0077ff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+
+.banner-content button:hover{
+
+
+
+}
+
+.cards{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fa0000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    margin: 0;
+    border-style:none;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    /* margin-top: 10px; */
+
+}
+p{
+    color: #333;
+    margin-top: 10px;
+}
+
+.card {
+    background: white;
+    color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    height: auto;
+
+}
+.card:hover{
+    transform: scale(1.05);
+
+}
+
+
+
+.btn{
+    display: inline-block;
+    padding: 16px;
+    text-decoration: none;
+    background: white;
+    color: #0077ff;
+    padding: 10px   10px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn:hover{
+    background: #333;
+    /* height: 100px; */
+}
+
+.icon{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.combatpass {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between img and text */
+    /* margin: 20px 0; */
+}
+
+/* Combat Pass Section */
+.back {
+    background-color: #f38200; /* Set background color */
+    padding: 40px 20px; /* Add padding to the section */
+}
+
+.combatpass {
+    display: flex;
+    justify-content: space-between; /* Spread the content evenly */
+    align-items: center;
+    gap: 30px; /* Add space between the image and text */
+    background-color: #ffffff; /* Set a dark background color */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.combatpass img {
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the image size */
+    border-radius: 10px; /* Round the corners of the image */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+.combatpass-text {
+    flex: 1;
+    max-width: 600px; /* Limit the width of the text section */
+    color: #fff; /* Set text color to white */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Improve line spacing for readability */
+}
+
+.combatpass-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add space between the title and paragraph */
+    color: #ff7300; /* Set the title color to a bright accent */
+}
+
+.cb {
+    font-size: 1.1rem;
+    margin-bottom: 20px; /* Add space between the text and the button */
+}
+
+.btnabt {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff7300; /* Bright accent color for the button */
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btnabt:hover {
+    background-color: #e65c00; /* Slightly darker shade for hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/* Testimonial Section */
+.testimonials {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Cards Layout */
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    width: 30%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px; /* Fixed height for uniformity */
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px); /* Hover effect to lift the card */
+}
+
+/* Testimonial Text */
+.testimonial-text p {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Author Info */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff7300; /* Add border around the image */
+}
+
+.author-info h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 80%;
+    }
+}
+
+/* Contact Us Section */
+/* Contact Us Section */
+.contact-us {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+}
+
+/* Container for the Form and Map */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Space between form and map */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Left Side: Contact Form */
+.contact-form {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limiting the form width */
+    width: 100%;
+}
+
+.contact-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-form h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #0077ff;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px; /* Fixed height for the message */
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #0077ff;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Right Side: Google Map */
+.google-map {
+    flex: 1;
+    max-width: 600px; /* Limiting the map width */
+    width: 100%;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 400px; /* Set the height for the map */
+    border-radius: 8px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 80%;
+        max-width: none;
+    }
+
+    .google-map {
+        width: 80%;
+        height: 300px;
+        margin-top: 20px; /* Added spacing between form and map on mobile */
+    }
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 50px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #1e90ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
